@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* main */
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	display: flex;
+	padding: 20px;
+}
+p{
+ margin: 0.75rem 0;
+}
+/* utility Classes */
+
+/* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top:0;
+  background: #000;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+  text-align: center;
+}
+
+#navbar ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+#navbar ul li a {
+	color: #fff;
+	padding: 15px;
+	display: inline-block;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    background: #444;
+    color: #038DFE;
+    border-radius: 5px;
+}
+
+.image img {
+	display: flex;
+	border-radius: 50%;
+	margin-left: 40px;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+  width: 200px;
+  height: 600px;
+  background: #038DFE;
+}
+
+.flex-level {
+  display: flex;
+  flex-wrap: wrap;
+	justify-content: space-between;
+  width: 1000px;
+  height: 200px;
+	padding: 20px;
+	border-radius: 50%;
+}
+
+
+#i-lev1 {
+	color: #fff;
+	margin-left: 50px;
+
+}
+
+#i-lev2 {
+	color: #fff;
+	margin-left: 50px;
+
+}
+
+#i-lev3 {
+	color: #fff;
+	margin-left: 50px;
+}
+
+{}
+
+.ring{
+	display: flex;
+	padding-top: 10px;
+	width: 60%;
+	margin-left: 48px;
+	justify-content: space-around;
+
+}
+.ring1 {
+	height: 32px;
+	width: 10px;
+	border-radius: 25%;
+	background: #fff;
+}
+
+.briefs{
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 200px;
+	padding: 20px;
+	border-radius: 50%;
+}
+
+.item4{
+	display: flex;
+	position: relative;
+	left: -180px;
+	margin-left: 50px;
+}
+.item5{
+	display: flex;
+	position: relative;
+	left: -196px;
+	margin-left: 50px;
+}
+.item6{
+	display: flex;
+	position: relative;
+	left: 660px;
+	top: -180px;
+
+}
+
+.contact-list {
+	display: flex;
+	list-style-type: none;
+	color: white;
+  background-color: black;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+  color: #fff;
+}
+
+.greyfont {
+	color: grey;
+}
