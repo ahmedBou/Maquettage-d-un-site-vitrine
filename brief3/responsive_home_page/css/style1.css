@@ -1,0 +1,316 @@
+/* 1 fonts-google.com */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* 2 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+}
+
+a {
+	/* 3 remove the underline from the links */
+	text-decoration: none;
+}
+
+p{
+	/* 4 adding a margin back to top and bottom
+	 -- left and right, because reset takes margin
+	  and padding*/
+ margin: 0.75rem 0;
+}
+
+/* 11.1 Utility Classes*/
+/* this gonna stick in the middle no matter what*/
+.container{
+	/* restricted to a certain width*/
+	max-width: 1100px;
+	/* to make sure that it's aligns in the middle */
+	margin: auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+/* align text to center*/
+.text-center{
+	text-align: center;
+}
+/* 5 color the span with blue */
+.text-primary {
+	color: #038DFE;
+}
+.bg-primary{
+	background: #038DFE;
+	color: #fff;
+}
+.bg-light{
+	background: #f4f4f4;
+	color: #333;
+}
+.bg-dark{
+	background: #333;
+	color: #f4f4f4;
+}
+/* 10.11 class of l-heading*/
+.l-heading {
+	font-size: 4rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.1;
+}
+.m-heading {
+	font-size: 2rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.1;
+}
+/* 10.12 class of lead*/
+.lead {
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+}
+
+.py-1{padding: 1.5rem 0;}
+.py-2{padding: 2rem 0;}
+.py-3{padding: 3rem 0;}
+
+.p-1{padding: 1.5rem;}
+.p-2{padding: 2rem;}
+.p-3{padding: 3rem;}
+/*10.13*/
+.btn{
+	display: inline-block;
+	color: #fff;
+	background: #038DFE;
+	padding: 0.5rem 2rem;
+	border: none;
+	border-radius: 5px;
+}
+/*10.14*/
+.btn:hover{
+	background: #fff;
+	color: #038DFE;
+}
+
+.btn-dark{
+	background: #7ab436;
+}
+
+.list{
+	margin: 0.5rem 0;
+	list-style: none;
+}
+.list li {
+	padding: 0.5rem 0;
+	border-bottom: #444 dotted 1px;
+}
+/* 6 Navbar */
+#navbar{
+	/* 6.3 when using flex the two h1 and ul child
+	 are floated horizontally*/
+	display: flex;
+	/* 6.2 the navbar will stick on the top
+	 above the showcase when scrolling */
+	position: sticky;
+	top: 0;
+	/* 6.1 background color black of the navbar */
+	background: #000;
+	color: #fff;
+	/* 6.4 make space between both flex h1 and ul so
+	they get pushed over to the side*/
+	justify-content: space-between;
+	/* 6.5 z-index:1 is the higher number closer to screen
+	  to user on top of everything when we scroll down
+	  unless if we set z-index:2 or higher this should
+    go over everything else*/
+	z-index: 1;
+	/* 6.6 1rem(root of html) is 16px*/
+	padding: 1rem;
+}
+/* 7 unordered list child */
+#navbar ul {
+	/* 7.1 we want also the ul going to be flex because
+	 we want to align it horizontally */
+	display: flex;
+	/* 7.2 put the h2(logo) and ul at the same level  */
+	align-item: center;
+	/* 7.3 let's take away the bullet points */
+	list-style: none;
+}
+/* 8 dealing with the links */
+#navbar ul li a {
+	/* 8.1 give the links the color of blue*/
+	color: #038DFE;
+	/* 8.2 separate the links giving the padding 0.75*16 */
+	padding: 0.75rem;
+	/* 8.3 adding a margin of 0.25 on the left and right */
+	margin: 0 0.25rem;
+}
+/* 9 hover it with a blue box around */
+#navbar ul li a:hover{
+	/* 9.1 blue box */
+	background: #038DFE;
+	/* 9.2 white color of the links*/
+	color: #fff;
+	/* 9.3 make the corners be a little rounded*/
+	border-radius: 5px;
+}
+
+/* 10 Showcase*/
+#showcase{
+	/* 10.1 ../ we want to go out because we are in css folder
+	 so we need to navigate out of it and then into the img folder.
+	 cover the entire area of just the content */
+	background:#333 url("../img/3.png")
+	 no-repeat center center/cover;
+	 /*10.2 vh(viewport height): we don't want just cover the content
+	 but cover the whole area */
+	 height: 100vh;
+	 /*10.3 make the color of everything inside the showcase white*/
+	 color: #fff;
+}
+/* showcase content*/
+#showcase .showcase-content {
+	display: flex;
+	/*10.4 flex:row is by default which is horizontal, but
+	we want to make it vertical (column) */
+	flex-direction: column;
+	/*10.5 we want to align the items center both vertical and
+	 horizontal so we gonna use justify content text align and
+	 align items*/
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	/* 10.6 when apply align-items to center i notice that it didn't
+	center it vertically, the reason of that is there's no height
+	 on the showcase-content, there is a height on the showcase
+	 so we add a height 100% of the viewport height of the showcase */
+	height: 100%;
+	/* 10.7 2rem on the left and right*/
+	padding: 0 2rem;
+	/* Overlay */
+	/* 10.8 position:absolute to cover the entire showcase content*/
+	position: absolute;
+	/*10.9 begin just after the navbar,
+	and have 65px the exact pixel of the menu */
+	top: 65px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*10.10 rgba(red, green, blue, alpha) alpha is the transparency */
+	background-color: rgba(0,0,0,0.4);
+}
+
+/*11 Section: Safi What We do*/
+#what .items{
+	display: flex;
+	padding: 1rem;
+}
+#what .items .item {
+	flex: 1;
+	text-align: center;
+	padding: 1rem;
+}
+#what .items .item i {
+	background: #038DFE;
+	padding: 1rem;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+/* Section: Who we are */
+#who{
+	display: flex;
+}
+
+#who div{
+	flex: 1;
+}
+
+#who .who-img{
+	background: url('../img/analyse.png') no-repeat center center/cover;
+}
+
+/* Section Clients */
+#clients .items{
+	display: flex;
+	justify-content: space-around;
+}
+#clients .items img{
+	/* block to be able to add width to it*/
+	display: block;
+	/* auto to set it right in the center*/
+	margin: auto;
+	/* 60% of it's container*/
+	width: 60%;
+}
+
+/* Section Contact */
+#contact{
+	display: flex;
+}
+#contact .map, #contact .contact-form {
+	flex: 1;
+}
+
+#contact .contact-form .form-group {
+	margin: 0.75rem;
+}
+#contact .contact-form label {
+	display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+	width: 100%;
+	padding: 0.5rem;
+}
+
+#subscription .counter{
+	display : flex;
+	padding: 1rem;
+}
+#subscription .countd{
+	flex: 1;
+	text-align: center;
+	padding: 1rem;
+}
+#subscription .countd h3{
+	background: #038DFE;
+	padding: 0.7rem;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+#dashboard .items{
+	display: flex;
+}
+
+#dashboard .items .item {
+	flex: 1;
+	text-align: center;
+	border: 1px dotted red;
+}
+
+#dashboard .items .item .content{
+	background-color: #038DFE;
+  color:white;
+  height: 750px;
+  text-align: left;
+
+}
+
+
+#dashboard .items .item i {
+	background: #038DFE;
+	padding: 1rem;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+	margin-top: 5rem;
+
+}
+
+
+

@@ -1,5 +1,8 @@
 /* Align icon to left */
-
+/* So i want to turn each item into a flex container
+so that they go horizontal the div and the icon are
+horizontal even know these are flex items themselves
+they can also*/
 #what .items .item {
 	display: flex;
 	text-align: left;

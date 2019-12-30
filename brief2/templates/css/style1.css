@@ -211,3 +211,31 @@ p{
 	padding: 0.5rem;
 }
 
+/* countdown
+#subscription{
+	display: flex;
+	justify-content: center;
+	height: 60vh;
+	font-size: 3rem;
+	background: url(../img/1.png)
+	no-repeat center center/cover;
+	align-items: center;
+}
+*/
+#subscription .counter{
+	display : flex;
+	padding: 1rem;
+}
+#subscription .countd{
+	flex: 1;
+	text-align: center;
+	padding: 1rem;
+}
+#subscription .countd h3{
+	background: #038DFE;
+	padding: 0.7rem;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
+
